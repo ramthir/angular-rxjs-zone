@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-rxjs-zone"
+    }
+  },
+  "defaultProject": "angular-rxjs-zone",
+  "cli": {
+    "analytics": "1c4befa6-78e1-485b-82a8-02c05c3c7c2d"
+  }
 }
