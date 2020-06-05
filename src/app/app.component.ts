@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { interval, Observable } from 'rxjs';
+import { map, startWith } from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-rxjs-zone';
+
+  time$: Observable<Date>;
+
+  constructor() {
+    this.time$ = interval(60000).pipe(startWith(new Date()), map(tick => new Date()));
+  }
+
 }
