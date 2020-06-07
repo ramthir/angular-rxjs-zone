@@ -4,8 +4,7 @@ import { map, startWith } from "rxjs/operators";
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `<span id="time">{{time$ | async | date: 'short'}}</span>`
 })
 export class AppComponent {
 
